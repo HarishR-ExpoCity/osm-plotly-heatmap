@@ -7,11 +7,11 @@ export default function Home() {
   const typedData = data as DataStructure;
 
   // Combine points from all detections into one array
-  const combinedPoints = typedData.detections.flatMap(detection => detection.points);
+  //const combinedPoints = typedData.detections.flatMap(detection => detection.points);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <HeatMap data={combinedPoints} />
+      <HeatMap data={typedData.detections} />
     </main>
   );
 }
