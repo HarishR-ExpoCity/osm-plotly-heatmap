@@ -32,7 +32,7 @@ const HeatMap: React.FC<HeatMapProps> = ({ data }) => {
         const layout: any = {
             mapbox: {
                 center: { lon: 55.15, lat: 24.96 },
-                zoom: 13,
+                zoom: 14,
                 style: mapStyle,
             },
             title: 'Detection Density Heatmap',
@@ -56,8 +56,8 @@ const HeatMap: React.FC<HeatMapProps> = ({ data }) => {
                     method: 'animate',
                     args: [[`frame-${index}`], {
                         mode: 'immediate',
-                        frame: { duration: 300, redraw: true },
-                        transition: { duration: 300, easing: 'linear' }
+                        frame: { duration: 500, redraw: true },
+                        transition: { duration: 500, easing: 'linear' }
                     }]
                 })),
             }],
@@ -76,7 +76,7 @@ const HeatMap: React.FC<HeatMapProps> = ({ data }) => {
                         mode: 'immediate',
                         fromcurrent: true,
                         frame: { duration: 500, redraw: true },
-                        transition: { duration: 300, easing: 'linear' }
+                        transition: { duration: 500, easing: 'linear' }
                     }]
                 }]
             }]
